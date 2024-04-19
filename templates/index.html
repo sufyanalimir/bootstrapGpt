@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootstrapGPT</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/ChatGPT.png') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <!-- Link to Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container-fluid shadow fixed-top bg-white">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+              <img
+                src="{{ url_for('static', filename='images/ChatGPT.png') }}"
+                alt=""
+                width="30"
+                class="d-inline-block align-text-top"
+              />
+              BootstrapGPT
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="myNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                  </li>
+                </ul>
+                <ul class="myBtn">
+                  <li>
+                    <a
+                      href="{{ url_for('chat') }}"
+                      class="btn btn-outline-secondary"
+                      >Try Now</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section id="home">
+      <div class="container hero-container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <p class="lead m-0">Bootstrap Buddy GPT</p>
+            <h1 class="hero-h1 text-primary display-4 mb-4">
+              Unlocking Potential Through Innovation
+            </h1>
+            <p class="mb-4 text-dark fs-5">
+              Meet your specialized AI coding companion designed to simplify
+              Bootstrap coding.
+            </p>
+            <div class="hero-btn-container">
+              <a
+                href="{{ url_for('chat') }}"
+                class="px-3 py-sm-3 px-sm-4 btn btn-primary hero-content-btn2"
+              >
+                Get started
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="{{url_for('static', filename='images/bootstrap-logo.png')}}"
+              alt=""
+              class="img-fluid shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <div class="text-center mx-auto">
+          <h1 class="display-6 mb-3 pt-2">Who are we?</h1>
+          <p class="text-start">
+            We're tech enthusiast dedicated to simplifying your experience with
+            Bootstrap, the popular front-end framework for building responsive
+            and mobile-first websites. With our innovative chatbot technology
+            powered by OpenAI, we aim to provide comprehensive support and
+            guidance for all your Bootstrap-related queries.
+          </p>
+          <p class="text-start">
+            Our mission at BootstrapGPT is clear: to empower web developers,
+            designers, and enthusiasts with the knowledge and tools they need to
+            leverage Bootstrap effectively. We understand that navigating
+            through the complexities of web development frameworks can be
+            daunting, which is why we're here to streamline the process and make
+            it accessible to everyone.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center mx-auto">
+          <h1 class="display-6 mt-5 mb-3 pt-2">What our bot serves?</h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-item shadow p-2 d-flex flex-column justify-content-center"
+            >
+              <div class="icon-box-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                <h4 class="">Bootstrap Code Checker</h4>
+              </div>
+              <p class="mb-4">
+                An advanced feature that performs a thorough scan to scrutinize
+                your Bootstrap code for any possible errors or inconsistencies
+                to ensure effective functionality.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-item shadow p-2 d-flex flex-column justify-content-center"
+            >
+              <div class="icon-box-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                <h4 class="">Bootstrap Interview Questions</h4>
+              </div>
+              <p class="mb-4 text-justify">
+                Prepares you for potential job interviews by predictively
+                offering questions often asked about Bootstrap during interviews
+                and their comprehensive answers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-item shadow p-2 d-flex flex-column justify-content-center"
+            >
+              <div class="icon-box-primary">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+              <h4 class="">Bootstrap Code Examples</h4>
+              <p class="mb-4">
+                Offers a comprehensive library of Bootstrap codes on various
+                topics to provide guidance and reference for developers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row g-4 my-1">
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-item shadow p-2 d-flex flex-column justify-content-center"
+            >
+              <div class="icon-box-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                <h4 class="">Bootstrap Optimization</h4>
+              </div>
+              <p class="mb-4">
+                Enhances your Bootstrap code's performance by optimizing the
+                code, thus speeding up your applications and making them more
+                efficient.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-item shadow p-2 d-flex flex-column justify-content-center"
+            >
+              <div class="icon-box-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                <h4 class="">Bootstrap Career Advice</h4>
+              </div>
+              <p class="mb-4 text-justify">
+                Provides tailored career guidance and advice for aspiring
+                developers interested in advancing their career with Bootstrap
+                expertise.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-item shadow p-2 d-flex flex-column justify-content-center"
+            >
+              <div class="icon-box-primary">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+              <h4 class="">Bootstrap Interview Questions</h4>
+              <p class="mb-4">
+                Prepares you for potential job interviews by predictively
+                offering questions often asked about Bootstrap during interviews
+                and their comprehensive answers.
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section id="team">
+      <div class="container py-5">
+        <div class="text-center mx-auto">
+          <h1 class="display-6 mt-5 mb-3 pt-2">
+            Meet engineer behind the screen
+          </h1>
+        </div>
+        <div class="card-container">
+          <div class="card" style="width: 18rem">
+            <img
+              src="{{ url_for('static', filename='images/profile3.png') }}"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mir Sufyan Ali</h5>
+              <p class="card-text">Software Development Engineer[SDE]</p>
+            </div>
+          </div>
+          <!-- <div class="card" style="width: 18rem">
+            <img
+              src="{{ url_for('static', filename='images/profile_img2.jpg') }}"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mona Nahdi</h5>
+              <p class="card-text">Software Development Engineer[SDE]</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jspdf.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
