@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #070f2b;
+  --secondary-color: #ecf0f1;
+  --tertiary-color: #1b1a55;
+}
+
+body {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+a{
+  text-decoration: none;
+}
+
+.fixed-top {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn-primary {
+  background: transparent;
+}
+
+.doc-btn{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+}
+
+.fixed-bottom {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+  text-align: left;
+  padding: 10px;
+}
+
+.container-prompt {
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-response {
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scrollable-content {
+  margin-block: 1.5em;
+  max-width: 70%;
+  margin-inline: auto;
+  max-height: 70vh; /* Set the maximum height for scrollability */
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.blackForPdf {
+  color: black;
+}
+
+#user-prompt,
+#response-display {
+  display: flex;
+  align-items: flex-start;
+}
+
+#response-display button {
+  float: right;
+}
+
+.p1 {
+  font-weight: bold;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.p2 {
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.p3 {
+  margin-left: 1em;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+/* Additional styling for input field and buttons */
+.input-group {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Additional styling for the scrollbar */
+.scrollable-content::-webkit-scrollbar {
+  width: 0; /* Set the width to 0 to hide the scrollbar */
+}
+
+/* Hide scrollbar in Firefox */
+.scrollable-content {
+  scrollbar-width: none;
+}
+
+.credit{
+  margin-block: 0.5em;
+}
+
+@media screen and (max-width: 576px) {
+  .input-group {
+    width: 100%;
+  }
+  .scrollable-content {
+    margin-inline: unset;
+    max-width: 100%;
+    font-size: 1em;
+  }
+  .fixed-top h3 {
+    font-size: 1em;
+  }
+  /* .container-prompt {
+    padding: 5px;
+  } */
+  .doc-btn{
+    justify-content: space-between;
+    & h5 a{
+      font-size: 0.8em;
+    }
+  }
+  .username,
+  .logo{
+    font-size: 0.8em !important;
+  }
+
+  .credit{
+    margin: 1em;
+    font-size: 0.75em;
+  }
+}
